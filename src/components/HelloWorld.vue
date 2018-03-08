@@ -5,32 +5,39 @@
     <el-row>
       <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
     </el-row>
-    <el-row>
-      <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
-      <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-    </el-row>
-    <el-row>
-      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-    </el-row>
+    <!--<el-row>-->
+      <!--<el-col :span="12"><div class="grid-content bg-purple"></div></el-col>-->
+      <!--<el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>-->
+    <!--</el-row>-->
+    <!--<el-row>-->
+      <!--<el-col :span="8"><div class="grid-content bg-purple"></div></el-col>-->
+      <!--<el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>-->
+      <!--<el-col :span="8"><div class="grid-content bg-purple"></div></el-col>-->
+    <!--</el-row>-->
+    <!--<el-row>-->
+      <!--<el-col :span="6"><div class="grid-content bg-purple"></div></el-col>-->
+      <!--<el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>-->
+      <!--<el-col :span="6"><div class="grid-content bg-purple"></div></el-col>-->
+      <!--<el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>-->
+    <!--</el-row>-->
+    <!--<el-row>-->
+      <!--<el-col :span="4"><div class="grid-content bg-purple"></div></el-col>-->
+      <!--<el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>-->
+      <!--<el-col :span="4"><div class="grid-content bg-purple"></div></el-col>-->
+      <!--<el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>-->
+      <!--<el-col :span="4"><div class="grid-content bg-purple"></div></el-col>-->
+      <!--<el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>-->
+    <!--</el-row>-->
 
-    <router-link to="/router">to router</router-link>
-    <router-view></router-view>
+    <span>使用button实现路由跳转</span><br>
+    <span>
+      <el-button @click="toRouter">toRouter</el-button>
+      <el-button @click="toElemnets">toElements</el-button>
+    </span>
+    <el-card class="box-card">
+      <router-view></router-view>
+    </el-card>
+
   </div>
 </template>
 
@@ -43,6 +50,14 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    toRouter: function () {
+      this.$router.push('/router/1');
+    },
+    toElemnets: function () {
+      this.$router.push('/element/nav')
     }
   }
 }
