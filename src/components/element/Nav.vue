@@ -1,7 +1,9 @@
 <template>
   <div>
-    <span>this is nav page</span>
-    <router-link to="/element/nav/leftnav">To Left Nav</router-link>
+    <span>
+      <el-button @click="toNav">Nav</el-button>
+      <el-button @click="toTable">Table</el-button>
+    </span>
     <br>
     <el-card class="box-card">
       <br>
@@ -11,9 +13,25 @@
 </template>
 
 <script>
-    export default {
-        name: "nav"
+    import ElButton from "element-ui/packages/button/src/button";
 
+    export default {
+      components: {ElButton},
+      name: "nav",
+      data: function () {
+        return {
+          msg: 'message',
+          msg2: 'messge2'
+        }
+      },
+      methods: {
+        toNav: function () {
+          this.$router.push('/element/nav/leftnav')
+        },
+        toTable: function () {
+          this.$router.push('/element/nav/table')
+        }
+      }
     }
 </script>
 <style scoped>

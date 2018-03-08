@@ -68,7 +68,6 @@
             alert(JSON.stringify(this.student))
           },
           getStudent: function () {
-            // getStudents().getStudent().then((data) => {
               this.$ajax('/student/findAll').then((data) => {
               console.log("成功" + JSON.stringify(data.data))
               this.students = data.data

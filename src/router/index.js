@@ -4,7 +4,7 @@ import HelloWorld from '../components/HelloWorld'
 import Layout from '../components/element/Layout'
 import Nav from '../components/element/Nav'
 import LeftNav from '../components/element/nav/LeftNav'
-
+import Table from '../components/element/table/Table'
 Vue.use(Router);
 
 // noinspection JSUnresolvedVariable
@@ -22,13 +22,16 @@ export default new Router({
         },
         {
           path: '/element/nav',
-          name: 'nav',
           component: Nav,
           children: [
             {
               path: 'leftnav',
               name: '',
               component: LeftNav
+            },
+            {
+              path: 'table',
+              component: Table
             }
           ]
         }
