@@ -3,6 +3,7 @@
     <span>
       <el-button @click="toNav">Nav</el-button>
       <el-button @click="toTable">Table</el-button>
+      <el-button @click="toFileUpload">FileUpdate</el-button>
     </span>
     <br>
     <el-card class="box-card">
@@ -30,7 +31,10 @@
         },
         toTable: function () {
           this.$router.push('/element/nav/table')
-        }
+        },
+        toFileUpload: function () {
+          this.$router.push('/element/nav/fileupload')
+        },
       }
     }
 </script>

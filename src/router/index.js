@@ -5,6 +5,7 @@ import Layout from '../components/element/Layout'
 import Nav from '../components/element/Nav'
 import LeftNav from '../components/element/nav/LeftNav'
 import Table from '../components/element/table/Table'
+import FileUpload from '../components/element/file/FileUpload'
 Vue.use(Router);
 
 // noinspection JSUnresolvedVariable
@@ -32,6 +33,10 @@ export default new Router({
             {
               path: 'table',
               component: Table
+            },
+            {
+              path: 'fileupload',
+              component: FileUpload
             }
           ]
         }
