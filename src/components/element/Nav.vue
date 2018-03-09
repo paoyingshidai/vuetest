@@ -17,7 +17,7 @@
 
     export default {
       components: {ElButton},
-      name: "nav",
+      name: "elementNav",
       data: function () {
         return {
           msg: 'message',
