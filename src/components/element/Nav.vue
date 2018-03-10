@@ -4,6 +4,7 @@
       <el-button @click="toNav">Nav</el-button>
       <el-button @click="toTable">Table</el-button>
       <el-button @click="toFileUpload">FileUpdate</el-button>
+      <el-button @click="toWebSocket">WebSocket</el-button>
     </span>
     <br>
     <el-card class="box-card">
@@ -35,6 +36,9 @@
         toFileUpload: function () {
           this.$router.push('/element/nav/fileupload')
         },
+        toWebSocket: function () {
+          this.$router.push('/element/nav/websocket')
+        }
       }
     }
 </script>

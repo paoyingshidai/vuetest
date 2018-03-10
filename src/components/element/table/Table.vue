@@ -57,6 +57,7 @@
         name: "table",
         data: function () {
           return {
+            web_socket: {},
             pageResult: {
               number: 0,
               size: 15
@@ -87,7 +88,6 @@
               console.log(JSON.stringify(err))
             })
           }
-
         },
       created: function () {
         this.getUsers(0);

@@ -6,6 +6,8 @@ import Nav from '../components/element/Nav'
 import LeftNav from '../components/element/nav/LeftNav'
 import Table from '../components/element/table/Table'
 import FileUpload from '../components/element/file/FileUpload'
+import web_socket from '../components/element/websocket/Websocket'
+
 Vue.use(Router);
 
 // noinspection JSUnresolvedVariable
@@ -37,6 +39,10 @@ export default new Router({
             {
               path: 'fileupload',
               component: FileUpload
+            },
+            {
+              path: 'websocket',
+              component: web_socket
             }
           ]
         }
